@@ -1,3 +1,5 @@
 # CPP_advanced_course
  Repository for master degree course: "Programming in C++ (Advanced Course)"
- Powered by Boris Tarakanov
+
+
+ **Powered by Boris Tarakanov (1032259220)**
