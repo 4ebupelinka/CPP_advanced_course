@@ -1,0 +1,28 @@
+# Visual Studio cache/IDE
+.vs/
+*.user
+*.suo
+
+# Build directories
+x64/
+Debug/
+Release/
+[Bb]in/
+[Oo]bj/
+
+# Compiled binaries
+*.exe
+*.dll
+*.lib
+*.ilk
+*.idb
+*.pdb
+*.obj
+*.enc
+
+# Build logs
+*.log
+*.tlog
+
+# Other
+*.cache
