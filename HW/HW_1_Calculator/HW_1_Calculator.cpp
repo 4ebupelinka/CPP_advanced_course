@@ -1,36 +1,41 @@
 #include <iostream>
+#include <string>
+#include <cctype>
+#include <variant>
 #include "Tokenizer.h"
 #include "CheckErrors.h"
-using namespace std;
-
-
 
 int main() {
-    string inputString, expr;
+    std::string inputString, expr;
+
     while (true) {
-        cout << "Введите выражение: ";
-        getline(cin, inputString);
         expr.clear();
-            
 
-        for (char c : inputString) if (!isspace(static_cast<unsigned char>(c))) expr.push_back(c);
-        auto tokens = tokenize(expr);
+        std::cout << "Введите выражение: ";
+        std::getline(std::cin, inputString);
 
+        for (char c : inputString) {
+            if (!std::isspace(static_cast<unsigned char>(c))) {
+                expr.push_back(c);
+            }
+        }
 
+        std::vector<Token> tokens = tokenize(expr);
 
-        if (!checkErrors(tokens)) {
+        if (!checkErrors(tokens, expr)) {
             continue;
         }
 
-        for (auto& t : tokens) {
-            if (holds_alternative<double>(t)) {
-                cout << get<double>(t) << " ";
+        for (const Token& t : tokens) {
+            if (std::holds_alternative<double>(t)) {
+                std::cout << std::get<double>(t) << " ";
             }
             else {
-                cout << get<string>(t) << " ";
+                std::cout << std::get<std::string>(t) << " ";
             }
         }
-        cout << endl;
-    } 
+        std::cout << std::endl;
+    }
+
     return 0;
 }

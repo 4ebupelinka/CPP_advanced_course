@@ -2,8 +2,7 @@
 #include <string>
 #include <variant>
 #include <vector>
-using namespace std;
 
-using Token = variant<double, string>;
+using Token = std::variant<double, std::string>;
 
-vector<Token> tokenize(const string& expression);
+std::vector<Token> tokenize(const std::string& expression);

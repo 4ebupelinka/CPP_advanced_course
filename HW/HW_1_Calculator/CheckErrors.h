@@ -1,11 +1,8 @@
 #pragma once
 #include <vector>
 #include <variant>
-#include <utility>
 #include <string>
-using namespace std;
 
-using Token = variant<double, string>;
+using Token = std::variant<double, std::string>;
 
-
-bool checkErrors(const vector<Token>& tokens);
+bool checkErrors(const std::vector<Token>& tokens, const std::string& expr);
