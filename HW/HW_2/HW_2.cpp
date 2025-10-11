@@ -1,20 +1,77 @@
-// HW_2.cpp : This file contains the 'main' function. Program execution begins and ends there.
-//
+#include "Task_1_temperature.h"
+#include "Task_2_c_style_string.h"
+#include "Task_3_complex_calculator.h"
+#include "Task_4_swap.h"
+#include "Task_5_books.h"
+#include "Task_6_pointers.h"
+#include "Task_7_students.h"
+#include "Task_8_array_info.h"
+#include "Task_9_account.h"
+#include "Task_10_sort_and_search.h"
 
 #include <iostream>
 
-int main()
-{
-    std::cout << "Hello World!\n";
+int main() {
+    int choice;
+
+    while (true) {
+        std::cout << "\n===========================\n";
+        std::cout << " Выберите задание (1-10)\n";
+        std::cout << " 0 - Выход\n";
+        std::cout << "===========================\n";
+        std::cout << "Ваш выбор: ";
+        std::cin >> choice;
+
+        switch (choice) {
+        case 0:
+            std::cout << "Выход из программы...\n";
+            return 0;
+
+        case 1:
+            RunTask1();
+            break;
+
+        case 2:
+            RunTask2();
+            break;
+
+        case 3:
+            RunTask3();
+            break;
+
+        case 4:
+            RunTask4();
+            break;
+
+        case 5:
+            RunTask5();
+            break;
+
+        case 6:
+            RunTask6();
+            break;
+
+        case 7:
+            RunTask7();
+            break;
+
+        case 8:
+            RunTask8();
+            break;
+
+        case 9:
+            RunTask9();
+            break;
+
+        case 10:
+            RunTask10();
+            break;
+
+        default:
+            std::cout << "Нет такого задания 😶‍🌫️\n";
+            break;
+        }
+    }
+
+    return 0;
 }
-
-// Run program: Ctrl + F5 or Debug > Start Without Debugging menu
-// Debug program: F5 or Debug > Start Debugging menu
-
-// Tips for Getting Started: 
-//   1. Use the Solution Explorer window to add/manage files
-//   2. Use the Team Explorer window to connect to source control
-//   3. Use the Output window to see build output and other messages
-//   4. Use the Error List window to view errors
-//   5. Go to Project > Add New Item to create new code files, or Project > Add Existing Item to add existing code files to the project
-//   6. In the future, to open this project again, go to File > Open > Project and select the .sln file

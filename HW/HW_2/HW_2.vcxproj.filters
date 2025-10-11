@@ -13,8 +13,35 @@
       <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
       <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
     </Filter>
+    <Filter Include="Source Files\Task_10_sort_and_search">
+      <UniqueIdentifier>{ed206dd6-ec49-4b0d-866f-fbf1badcaa96}</UniqueIdentifier>
+    </Filter>
     <Filter Include="Source Files\Task_1_temperature">
       <UniqueIdentifier>{96d62c32-f910-4f47-a089-ca8b3c33a901}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Task_2_c_style_string">
+      <UniqueIdentifier>{3f63d8bf-5459-4ac6-a628-4c6e1e6cc0b7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Task_3_complex_calculator">
+      <UniqueIdentifier>{2810a404-8539-47c9-8ca3-4fa1a5067755}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Task_4_swap">
+      <UniqueIdentifier>{bddc6376-954c-47ff-b1df-b29562eef7ac}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Task_5_books">
+      <UniqueIdentifier>{d8bc4d08-e1b6-4a88-82b4-24429949405c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Task_6_pointers">
+      <UniqueIdentifier>{fb98a62c-0d6a-46f0-a385-70bad4b55d38}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Task_7_students">
+      <UniqueIdentifier>{e55ca93b-02f4-4928-94f4-7867fa56c285}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Task_8_array_info">
+      <UniqueIdentifier>{65fbc527-c876-41b5-b65f-195979d4bbf0}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Task_9_account">
+      <UniqueIdentifier>{f3250481-b076-491e-a305-2aea0647213c}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
@@ -24,10 +51,64 @@
     <ClCompile Include="Task_1_temperature.cpp">
       <Filter>Source Files\Task_1_temperature</Filter>
     </ClCompile>
+    <ClCompile Include="Task_2_c_style_string.cpp">
+      <Filter>Source Files\Task_2_c_style_string</Filter>
+    </ClCompile>
+    <ClCompile Include="Task_3_complex_calculator.cpp">
+      <Filter>Source Files\Task_3_complex_calculator</Filter>
+    </ClCompile>
+    <ClCompile Include="Task_4_swap.cpp">
+      <Filter>Source Files\Task_4_swap</Filter>
+    </ClCompile>
+    <ClCompile Include="Task_5_books.cpp">
+      <Filter>Source Files\Task_5_books</Filter>
+    </ClCompile>
+    <ClCompile Include="Task_6_pointers.cpp">
+      <Filter>Source Files\Task_6_pointers</Filter>
+    </ClCompile>
+    <ClCompile Include="Task_7_students.cpp">
+      <Filter>Source Files\Task_7_students</Filter>
+    </ClCompile>
+    <ClCompile Include="Task_8_array_info.cpp">
+      <Filter>Source Files\Task_8_array_info</Filter>
+    </ClCompile>
+    <ClCompile Include="Task_9_account.cpp">
+      <Filter>Source Files\Task_9_account</Filter>
+    </ClCompile>
+    <ClCompile Include="Task_10_sort_and_search.cpp">
+      <Filter>Source Files\Task_10_sort_and_search</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Task_1_temperature.h">
       <Filter>Source Files\Task_1_temperature</Filter>
+    </ClInclude>
+    <ClInclude Include="Task_2_c_style_string.h">
+      <Filter>Source Files\Task_2_c_style_string</Filter>
+    </ClInclude>
+    <ClInclude Include="Task_3_complex_calculator.h">
+      <Filter>Source Files\Task_3_complex_calculator</Filter>
+    </ClInclude>
+    <ClInclude Include="Task_4_swap.h">
+      <Filter>Source Files\Task_4_swap</Filter>
+    </ClInclude>
+    <ClInclude Include="Task_5_books.h">
+      <Filter>Source Files\Task_5_books</Filter>
+    </ClInclude>
+    <ClInclude Include="Task_6_pointers.h">
+      <Filter>Source Files\Task_6_pointers</Filter>
+    </ClInclude>
+    <ClInclude Include="Task_7_students.h">
+      <Filter>Source Files\Task_7_students</Filter>
+    </ClInclude>
+    <ClInclude Include="Task_8_array_info.h">
+      <Filter>Source Files\Task_8_array_info</Filter>
+    </ClInclude>
+    <ClInclude Include="Task_9_account.h">
+      <Filter>Source Files\Task_9_account</Filter>
+    </ClInclude>
+    <ClInclude Include="Task_10_sort_and_search.h">
+      <Filter>Source Files\Task_10_sort_and_search</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>
