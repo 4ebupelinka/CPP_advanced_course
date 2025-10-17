@@ -5,14 +5,13 @@ using namespace std;
 class Fastfood {
 private:
     bool money_washing = 1;
-    
+    void print_hello() {
+        cout << "hello" << name << endl;
+    }
 protected:
     string name;
     string owner;
     double capitalisation;
-    void print_hello() {
-        cout << "hello";
-    }
 
 public:
     string Test = 0;
@@ -81,8 +80,6 @@ int main() {
     Kebab k("Шаурма у Ашота", "Ашот", 100000, false);
     k.make_food();
     k.poison();
-    k.print_hello();
-
     cout << "Отмыв "<<k.getMoney_washing()<< endl;
     cout << "Владелец " << k.getOwner() << endl;
     //cout << "Владелец " << k.money_washing << endl;

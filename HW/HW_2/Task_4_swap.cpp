@@ -69,7 +69,9 @@ void RunTask4() {
 
 
 
-    /*swapValues(static_cast<int>(x), static_cast<int>(y));
-    swapValues(&x, &y);
-    swapValues(static_cast<int&>(x), static_cast<int&>(y));*/
+    //swapValues(x, y);
+
+    ////swapValues(static_cast<int>(x), static_cast<int>(y));
+    //swapValues(&x, &y);
+    //swapValues(static_cast<int&>(x), static_cast<int&>(y));
 }
