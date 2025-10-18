@@ -16,13 +16,13 @@ public:
     virtual ~Person() {}
 };
 
-class Student : public Person {
+class Student_2 : public Person {
 private:
     string studentId;
     double averageGrade;
 
 public:
-    Student(const string& personName, int personAge, const string& personAddress,
+    Student_2(const string& personName, int personAge, const string& personAddress,
         const string& studentIdentifier, double studentAverageGrade)
         : Person(personName, personAge, personAddress) {
         studentId = studentIdentifier;
@@ -54,14 +54,14 @@ public:
     }
 };
 
-class Professor : public Person {
+class Professor_2 : public Person {
 private:
     string department;
     double salary;
     int yearsOfExperience;
 
 public:
-    Professor(const string& personName, int personAge, const string& personAddress,
+    Professor_2(const string& personName, int personAge, const string& personAddress,
         const string& professorDepartment, double professorSalary, int experienceYears)
         : Person(personName, personAge, personAddress) {
         department = professorDepartment;
@@ -97,8 +97,8 @@ public:
 };
 
 void Task_2() {
-    Student student("Петр Петров", 20, "ул. Студенческая, 15", "S12345", 4.3);
-    Professor professor("Доктор Иванов", 45, "ул. Академическая, 10", "Компьютерные науки", 50000, 15);
+    Student_2 student("Петр Петров", 20, "ул. Студенческая, 15", "S12345", 4.3);
+    Professor_2 professor("Доктор Иванов", 45, "ул. Академическая, 10", "Компьютерные науки", 50000, 15);
 
     cout << "==============================" << endl;
     student.displayInfo();

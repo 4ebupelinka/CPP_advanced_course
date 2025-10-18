@@ -2,7 +2,7 @@
 #include <string>
 using namespace std;
 
-class Student {
+class Student_1 {
 private:
     string name;
     int age;
@@ -10,7 +10,7 @@ private:
     int grades[5];
 
 public:
-    Student(const string& studentName, int studentAge): averageGrade(0.0), age(studentAge), name(studentName){
+    Student_1(const string& studentName, int studentAge): averageGrade(0.0), age(studentAge), name(studentName){
         for (int i = 0; i < 5; i++) {
             grades[i] = 0;
         }
@@ -79,7 +79,7 @@ public:
 };
 
 void Task_1() {
-    Student student("Иван Иванов", 20);
+    Student_1 student("Иван Иванов", 20);
 
     student.setGrade(0, 5);
     student.setGrade(1, 4);

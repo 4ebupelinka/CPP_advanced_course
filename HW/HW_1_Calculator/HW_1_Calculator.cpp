@@ -1,41 +1,74 @@
 #include <iostream>
-#include <string>
-#include <cctype>
-#include <variant>
-#include "Tokenizer.h"
-#include "CheckErrors.h"
+#include <limits> 
+using namespace std;
+
+bool readNumber(double& num) {
+    cin >> num;
+    if (cin.fail()) {
+        cin.clear(); 
+        cin.ignore(numeric_limits<streamsize>::max(), '\n');
+        cout << "Ошибка: введите корректное число!" << endl;
+        return false;
+    }
+    return true;
+}
+
+bool readOperator(char& op) {
+    cin >> op;
+    if (op != '+' && op != '-' && op != '*' && op != '/' && op != '=') {
+        cout << "Ошибка: недопустимый оператор. Используйте +, -, *, / или =" << endl;
+        return false;
+    }
+    return true;
+}
 
 int main() {
-    std::string inputString, expr;
+    double result = 0;
+    double num;
+    char op;
+    bool firstInput = true;
+
+    cout << "=== Калькулятор как на телефоне ===" << endl;
+    cout << "Введите число, затем оператор (+, -, *, /),\n";
+    cout << "повторяйте пока не введёте '=' для вывода результата." << endl;
 
     while (true) {
-        expr.clear();
+        // Чтение числа
+        cout << "\nВведите число: ";
+        while (!readNumber(num)) {
+            cout << "Попробуйте снова: ";
+        }
 
-        std::cout << "Введите выражение: ";
-        std::getline(std::cin, inputString);
-
-        for (char c : inputString) {
-            if (!std::isspace(static_cast<unsigned char>(c))) {
-                expr.push_back(c);
+        if (firstInput) {
+            result = num;
+            firstInput = false;
+        }
+        else {
+            switch (op) {
+            case '+': result += num; break;
+            case '-': result -= num; break;
+            case '*': result *= num; break;
+            case '/':
+                if (num == 0) {
+                    cout << "Ошибка: деление на ноль!" << endl;
+                    continue;
+                }
+                result /= num;
+                break;
             }
         }
 
-        std::vector<Token> tokens = tokenize(expr);
-
-        if (!checkErrors(tokens, expr)) {
-            continue;
+        cout << "Введите оператор (+, -, *, /, =): ";
+        while (!readOperator(op)) {
+            cout << "Попробуйте снова: ";
         }
 
-        for (const Token& t : tokens) {
-            if (std::holds_alternative<double>(t)) {
-                std::cout << std::get<double>(t) << " ";
-            }
-            else {
-                std::cout << std::get<std::string>(t) << " ";
-            }
+        if (op == '=') {
+            cout << "\nРезультат: " << result << endl;
+            break;
         }
-        std::cout << std::endl;
     }
 
+    cout << "\nВыход из программы. До свидания!" << endl;
     return 0;
 }
