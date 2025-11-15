@@ -101,7 +101,7 @@ ThreadRunResult run_count(const vector<int>& data, int threadCount)
 
 int main()
 {
-    ifstream file("titanic.csv");
+    ifstream file("big_titanic.csv");
     if (!file.is_open()) {
         cout << "Файл" << endl;
         return 1;
