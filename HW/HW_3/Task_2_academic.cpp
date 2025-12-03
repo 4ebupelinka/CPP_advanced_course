@@ -24,8 +24,7 @@ private:
 public:
     Student_2(const string& personName, int personAge, const string& personAddress,
         const string& studentIdentifier, double studentAverageGrade)
-        : Person(personName, personAge, personAddress) {
-        studentId = studentIdentifier;
+        : Person(personName, personAge, personAddress), studentId(studentIdentifier){
         if (studentAverageGrade >= 0.0 && studentAverageGrade <= 5.0) {
             averageGrade = studentAverageGrade;
         }
@@ -63,8 +62,7 @@ private:
 public:
     Professor_2(const string& personName, int personAge, const string& personAddress,
         const string& professorDepartment, double professorSalary, int experienceYears)
-        : Person(personName, personAge, personAddress) {
-        department = professorDepartment;
+        : Person(personName, personAge, personAddress), department(professorDepartment){
         if (professorSalary >= 0.0) {
             salary = professorSalary;
         }

@@ -52,10 +52,16 @@ public:
 
     void calculateAverage() {
         double sum = 0;
+        int zeros = 0;
         for (int i = 0; i < 5; i++) {
-            sum += grades[i];
+            if (grades[i] == 0) {
+                ++zeros;
+            }
+            else {
+                sum += grades[i];
+            }
         }
-        averageGrade = sum / 5.0;
+        averageGrade = sum / (5 - zeros);
     }
 
     double getAverageGrade() const {
